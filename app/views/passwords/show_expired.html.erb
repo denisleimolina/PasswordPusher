@@ -1,19 +1,19 @@
 <div class="center-content">
 <p class="expired-message">
-  We apologize but this secret link has expired.
+  Pedimos desculpas, mas este link secreto expirou.
   <p>
-    This secret link
+    Este link secreto
 
     <% if @password.deleted %>
-      was manually expired by one of its viewers 
+      foi expirado manualmente por um de seus visualizadores
     <% elsif @password.views_remaining == 0 %>
-      has hit its maximum view count (<%=@password.expire_after_views%>)
+      atingiu sua contagem máxima de visualizações (<%=@password.expire_after_views%>)
     <% elsif @password.days_remaining == 0 %>
-      has hit its maximum age (<%=@password.expire_after_days%> days) 
+      atingiu sua idade máxima (<%=@password.expire_after_days%> days)
     <% end %>
 
-    and the password has been deleted from the database.
+    e a senha foi excluída do banco de dados.
   </p>
-  <p>If needed, please contact the person or organization who gave you this secret URL.</p>
+  <p>Se necessário, entre em contato com a pessoa ou organização que lhe forneceu este URL secreto.</p>
 </p>
 </div>

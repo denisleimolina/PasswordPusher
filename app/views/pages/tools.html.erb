@@ -1,8 +1,8 @@
-<h1 id="tools--applications">Tools &amp; Applications</h1>
+<h1 id="tools--applications">Ferramentas &amp; Aplicações</h1>
 
-<p>Using the JSON API, various tools exist to interface with Password Pusher to automate password distribution.</p>
+<p>Usando a API JSON, existem várias ferramentas para fazer a interface com o Password Pusher para automatizar a distribuição de senhas.</p>
 
-<p>We have no limits on how many passwords you can push (and have no intentions of adding limits) but we do have a rate limiter so the site doesn’t get taken down by bad scripts or bad actors.  Limit your tools to maximum 1 password every few seconds and you should be fine.</p>
+<p>Não temos limites para quantas senhas você pode empurrar (e não temos a intenção de adicionar limites), mas temos um limitador de taxa para que o site não seja retirado do ar por roteiros ou atores mal-intencionados. Limite suas ferramentas a no máximo 1 senha a cada poucos segundos e você estará bem.</p>
 
 <h1 id="slack">Slack</h1>
 
@@ -10,46 +10,46 @@
 
 <p><img src="https://disznc.s3.amazonaws.com/pwpush-slack.png" alt="" /></p>
 
-<h2 id="command-line-utilities">Command Line Utilities</h2>
+<h2 id="command-line-utilities">Utilitários de linha de comando</h2>
 
-<p>Some great command line utilities written by the community.</p>
+<p>Alguns ótimos utilitários de linha de comando escritos pela comunidade.</p>
 
 <ul>
   <li>
-    <p><a href="https://github.com/pgarm/pwposh">pgarm/pwposh</a>: a PowerShell module available in the <a href="https://www.powershellgallery.com/packages/PwPoSh/">PowerShell Gallery</a></p>
+    <p><a href="https://github.com/pgarm/pwposh">pgarm/pwposh</a>: um módulo PowerShell disponível no <a href="https://www.powershellgallery.com/packages/PwPoSh/"> Galeria PowerShell </a></p>
   </li>
   <li>
-    <p><a href="https://github.com/kprocyszyn/tools/blob/master/Get-PasswordLink/Get-PasswordLink.ps1">kprocyszyn/.Get-PasswordLink.ps1</a>: a PowerShell based CLI</p>
+    <p><a href="https://github.com/kprocyszyn/tools/blob/master/Get-PasswordLink/Get-PasswordLink.ps1">kprocyszyn/.Get-PasswordLink.ps1</a>: uma CLI baseada em PowerShell</p>
   </li>
   <li>
-    <p><a href="https://github.com/lnfnunes/pwpush-cli">lnfnunes/pwpush-cli</a>: a Node.js based CLI</p>
+    <p><a href="https://github.com/lnfnunes/pwpush-cli">lnfnunes/pwpush-cli</a>: uma CLI baseada em Node.js</p>
   </li>
   <li>
-    <p><a href="https://github.com/abkierstein/pwpush">abkierstein/pwpush</a>: a Python based CLI</p>
+    <p><a href="https://github.com/abkierstein/pwpush">abkierstein/pwpush</a>: uma CLI baseada em Python</p>
   </li>
 </ul>
 
-<h2 id="android-apps">Android Apps</h2>
+<h2 id="android-apps">Aplicações Android</h2>
 
 <ul>
-  <li><a href="https://play.google.com/store/apps/details?id=com.chesire.pushie">Pushie</a> by <a href="https://github.com/chesire">chesire</a></li>
+  <li><a href="https://play.google.com/store/apps/details?id=com.chesire.pushie">Pushie</a> por <a href="https://github.com/chesire">chesire</a></li>
 </ul>
 
-<h2 id="other">Other</h2>
+<h2 id="other">Outros</h2>
 
 <ul>
-  <li><a href="http://www.packal.org/workflow/passwordpusher">Alfred Workflow</a> for Mac users</li>
+  <li><a href="http://www.packal.org/workflow/passwordpusher">Fluxo de Trabalho Alfred</a> para usuarios MAC</li>
 </ul>
 
 <h2 id="raw-api">Raw API</h2>
 
-<p>This API allows you to interface with Password Pusher via JSON.  This can be utilized by existing utilities such as curl, wget or even javascript.  See the examples below for some ideas.</p>
+<p>Esta API permite que você interaja com o Password Pusher via JSON. Isso pode ser utilizado por utilitários existentes, como curl, wget ou até mesmo javascript. Veja os exemplos abaixo para algumas idéias.</p>
 
 <ul>
-  <li><a href="https://github.com/pglombardo/PasswordPusher/wiki/Password-API">The Password Pusher JSON API</a></li>
+  <li><a href="https://github.com/pglombardo/PasswordPusher/wiki/Password-API">A API JSON do Password Pusher</a></li>
 </ul>
 
-<h3 id="examples">Examples</h3>
+<h3 id="examples">Exemplos</h3>
 
 <h4 id="curl">Curl</h4>
 
@@ -59,7 +59,7 @@ curl -X POST --data "password[payload]=mypassword&amp;password[expire_after_days
 
 <h4 id="browser-js-console">Browser JS Console</h4>
 
-<p>You can test this in your browsers’ Javascript console by going to the front page of Password Pusher and enter:</p>
+<p>Você pode testar isso no console Javascript do seu navegador, indo para a página inicial do Password Pusher e digite:</p>
 
 <p><code>
 $.post('https://pwpush.com/p.json',
@@ -68,4 +68,4 @@ $.post('https://pwpush.com/p.json',
            function(data) { alert(data.url_token) } )
 </code></p>
 
-<p>See more explanation and examples in our <a href="https://github.com/pglombardo/PasswordPusher/wiki/Password-API">Github Wiki</a>.</p>
+<p>Veja mais explicações e exemplos em nosso <a href="https://github.com/pglombardo/PasswordPusher/wiki/Password-API">Github Wiki</a>.</p>

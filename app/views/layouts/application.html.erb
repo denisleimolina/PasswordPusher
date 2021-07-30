@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-
 <title>Password Pusher</title>
 <%= render :partial => "layouts/ga" if Rails.env == "production" %>
 <%= csrf_meta_tags %>
 <%= stylesheet_link_tag "application" %>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<meta content='PasswordPusher is an application to securely send passwords over the web. Links to passwords expire after a certain number of views and/or time has passed.' name='description'>
+<meta content='PasswordPusher é uma aplicação que permite enviar senhas de forma segura pela web. Os links para senhas expiram após um certo número de visualizações e / ou tempo.' name='description'>
 <meta content='width=device-width, initial-scale=1' name='viewport'>
 
 <link rel="apple-touch-icon" sizes="57x57" href="<%=asset_path('apple-icon-57x57.png')%>">
@@ -33,10 +32,8 @@
 
 <body>
 
-<%= link_to image_tag('horizontal-logo-small.png', class: 'horizontal-logo'), '/' %>
-
 <%= yield %> 
-<%= render partial: 'shared/footer' %>
+
 <%= javascript_include_tag "application"%>
 </body>
 </html>

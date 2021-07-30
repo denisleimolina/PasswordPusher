@@ -6,26 +6,23 @@ html {
 }
 
 body {
+  margin: 0em 0em 3em 0em;
   text-align: center;
-  background: #fff;
-  font-family: 'Open Sans', Tahoma, Georgia, Verdana, serif;    
-  // color: #1F1D30;
-  color: #6D6E70;
-  width: 95%;
-  font-size: 16px;
-  margin-left: auto;
-  margin-right: auto;
-  min-height: 100%;
+  background: #000 url(/assets/outlets-3e65e282fe0a08918bfffca7a56319dc.png) repeat;
+  font-family: 'Crete Round', serif;
+  color: #ddd
 }
 
 body::after{ content:''; display:block; min-height:100px; }
+
+
 
 @media (max-height:800px){
 	footer { position: static; }
 }
 
-h1 { font-size: 1.8em; color: #1F1D30;}
-h2 { font-size: 1.5em; color: #1F1D30; }
+h1 { font-size: 1.8em; color: #dddddd;}
+h2 { font-size: 1.5em; color: #dddddd; }
 h3 { font-size: 1em; color: #6D6E70;}
 h4 { font-size: .8em; color: #6D6E70;}
 
@@ -292,7 +289,7 @@ footer {
 .fa-snapchat-ghost {
   background: #fffc00;
   color: white;
-  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 #fdfcfc, 0 -1px black;
 }
 
 .fa-skype {

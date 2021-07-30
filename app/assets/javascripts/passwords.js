@@ -13,7 +13,7 @@ function saveExpirations()
   $.cookie('pwpush_dbv', dbv.checked.toString(), { expires: 365 });
 
   e = document.getElementById("cookie-save")
-  e.innerHTML = "Saved!"
+  e.innerHTML = "Salvo!"
   return true;
 }
 
@@ -22,7 +22,7 @@ $(document).ready(function() {
   secret_url_clipboard.on('success', function(e) {
     var clipboardButton = document.getElementById("clipboard-secret-url");
     var copyIcon = clipboardButton.innerHTML;
-    clipboardButton.innerText = "Copied!"
+    clipboardButton.innerText = "Copiado!"
     setTimeout(function() {
           clipboardButton.innerHTML = copyIcon;
     }, 1000);
@@ -32,9 +32,9 @@ $(document).ready(function() {
   var pw_clipboard = new ClipboardJS('.copy-to-clipboard');
   pw_clipboard.on('success', function(e) {
     var clipboardButton = document.getElementById("clipboard-button");
-    clipboardButton.innerText = "Copied!"
+    clipboardButton.innerText = "Copiado!"
     setTimeout(function() {
-          clipboardButton.innerText = "Copy to Clipboard";
+          clipboardButton.innerText = "Copiar para área de transferência";
     }, 2000);
     e.clearSelection();
   });
@@ -47,7 +47,7 @@ $(document).ready(function() {
   if (de) {
     if (days) {
       de.value = days
-      dr.innerHTML = days + " Days"
+      dr.innerHTML = days + " Dias"
     } else {
       showDaysValue(de.value)
     }
@@ -58,7 +58,7 @@ $(document).ready(function() {
   if (ve) {
     if (views) {
       ve.value = views
-      vr.innerHTML = views + " Views"
+      vr.innerHTML = views + " Visualizações"
     } else {
       showViewsValue(ve.value)
     }
@@ -82,7 +82,7 @@ $(document).ready(function() {
 
 $('#password_payload').keypress(function() {
   if ($('#password_payload').val().length > 250) {
-    noty({text: 'Passwords can be up to 250 characters maximum in length.', type: 'warning'});
+    noty({text: 'As senhas podem ter no máximo 250 caracteres.', type: 'warning'});
     $.noty.clearQueue()
     return false;
   }

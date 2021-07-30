@@ -35,10 +35,10 @@ class CommandsController < ApplicationController
     end
 
     if ["help", '-h', 'usage'].include?(secret.downcase)
-      render plain: "Usage /pwpush <password> [days,views]", layout: false
+      render plain: "Uso / pwpush <senha> [dias,visualizações]", layout: false
       return
     elsif BAD_PASSWORDS.include?(secret.downcase)
-      render plain: "Come on.  Do you really want to use that password?  Put in a bit of effort and try again.", layout: false
+      render plain: "Vamos lá. Você realmente quer usar essa senha? Faça um pouco de esforço e tente novamente.", layout: false
       return
     elsif ["april1st", "easter", "egg", "picklerick"].include?(secret.downcase)
       render plain: RANDOM_THINGS.sample, layout: false
@@ -64,7 +64,7 @@ class CommandsController < ApplicationController
     @password.validate!
 
     if @password.save
-      message = "Pushed password with #{days} days and #{views} views expiration: " +
+      message ="Senha enviada com #{days} dias e #{views} expiração de visualizações:" +
                 "#{request.env["rack.url_scheme"]}://#{request.env['HTTP_HOST']}/p/#{@password.url_token}"
       render plain: message, layout: false
     else

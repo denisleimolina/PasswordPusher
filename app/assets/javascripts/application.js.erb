@@ -11,18 +11,18 @@
 function showDaysValue(newValue)
 {
   if (newValue > 1) {
-  	document.getElementById("daysrange").innerHTML=newValue + ' Days';
+  	document.getElementById("daysrange").innerHTML=newValue + ' Dias';
   } else {
-  	document.getElementById("daysrange").innerHTML=newValue + ' Day';
+  	document.getElementById("daysrange").innerHTML=newValue + ' Dia';
   }
 }
 
 function showViewsValue(newValue)
 {
   if (newValue > 1) {
-  	document.getElementById("viewsrange").innerHTML=newValue + ' Views';
+  	document.getElementById("viewsrange").innerHTML=newValue + ' Visualizações';
   } else {
-  	document.getElementById("viewsrange").innerHTML=newValue + ' View';
+  	document.getElementById("viewsrange").innerHTML=newValue + ' Visualização';
   }
 }
 
@@ -43,7 +43,7 @@ function revertTextField(e) {
 }
 
 function setCopied() {
-	$('#clip_tip').text('copied!');
+	$('#clip_tip').text('Copiado!');
 }
 
 $('spoiler, .spoiler').spoilerAlert({max: 10, partial: 7})

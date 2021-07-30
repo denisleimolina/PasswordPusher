@@ -52,7 +52,7 @@ class PasswordsController < ApplicationController
     end
 
     if params[:password][:payload].length > 250
-      redirect_to '/', error: 'That password is too long.'
+      redirect_to '/', error: 'Essa senha é muito longa.'
       return
     end
 
@@ -109,7 +109,7 @@ class PasswordsController < ApplicationController
 
     respond_to do |format|
       if @password.save
-        format.html { redirect_to @password, notice: 'The password has been deleted.' }
+        format.html { redirect_to @password, notice: 'A senha foi excluída.' }
         format.json { render json: @password, status: :ok }
       else
         format.html { render action: 'new' }

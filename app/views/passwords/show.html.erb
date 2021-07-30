@@ -1,32 +1,32 @@
 <div class="center-content">
-<p>Your password is...</p>
+<p>Sua senha é ...</p>
 
 <div class='payload spoiler notranslate' id='pass' translate='no'><%=@payload%></div>
 
 <button class='copy-to-clipboard' data-clipboard-target='#pass' id='clipboard-button'>
-Copy to Clipboard
+  Copiar para área de transferência
 </button>
 
 <p class='pwinstructions'>
-Please obtain and securely store this password elsewhere, ideally in a password manager.
+  Obtenha e armazene essa senha com segurança em outro lugar, de preferência em um gerenciador de senhas.
 </p>
 
 <p>
 <% if @password.views_remaining == 0 %>
-    This secret link will be deleted in <strong><%=pluralize(@password.days_remaining, 'day')%></strong>
-     or <strong>0 more views</strong> (this is the last view).
+    Este link secreto será excluído em <strong><%=pluralize(@password.days_remaining, 'dia(s)')%></strong>
+     ou <strong>Mais 0 visualizações</strong> (esta é a última visualização).
 <% else %>
-    This secret link will be deleted in <strong><%=pluralize(@password.days_remaining, 'day')%></strong>
-     or <strong><%=pluralize(@password.views_remaining, 'more view')%></strong> (whichever occurs first).
+    Este link secreto será excluído em <strong><%=pluralize(@password.days_remaining, 'dia(s)')%></strong>
+     ou mais <strong><%=pluralize(@password.views_remaining, ' visualizações')%></strong> (o que ocorrer primeiro).
 <% end %>
 </p>
 
 <% if @password.deletable_by_viewer %>
     <a id="<%=@password.url_token%>"
-    data-confirm="This will expire this secret link and remove the password from the database forever.  Are you sure?"
+    data-confirm="Isso irá expirar este link secreto e remover a senha do banco de dados para sempre. Tem certeza?"
     rel="nofollow" data-method="delete"
     href="<%=password_path%>">
-    <button class="red-button">Delete This Secret Link Now</button>
+    <button class="red-button">Exclua este link secreto agora</button>
     </a>
 <% end %>
 </div>

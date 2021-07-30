@@ -1,9 +1,9 @@
-<h2>Your password has been pushed.</h2>
+<h2>Sua senha foi enviada.</h2>
 
 <p>&nbsp;</p>
 
 <p>
-  Use this secret link to share it:
+  Use este link secreto para compartilhá-lo:
 </p>
 <span class='input_group'>
     <input id='secret_url' value='<%=@secret_url%>' spellcheck='false' readonly='true'>
@@ -15,20 +15,20 @@
 <p style="height: 50px"/>
 
 <p>
-This newly pushed password will expire after 
-<strong><%=@password.expire_after_days%> days</strong> 
-or 
-<strong><%=@password.expire_after_views%> views</strong> 
-(whichever comes first)
+  Esta senha disponibilizada irá expirar após
+<strong><%=@password.expire_after_days%> Dias</strong>
+ou
+<strong><%=@password.expire_after_views%> Visualizações</strong>
+  (o que ocorrer primeiro)
 
 <% if @password.deletable_by_viewer %>
-  and <strong>can be</strong> deleted by viewers.
+  e <strong>pode ser</strong> excluído pelos visualizadores.
 <% else %>
-  and <strong>can NOT be</strong> deleted by viewers.
+  e <strong>não pode ser</strong> excluído pelos visualizadores.
 <% end %>
 </p>
 
 <p style="height: 50px"/>
 
 <p>
-<%=link_to "View This Password Now", @secret_url %> (will burn a view) or <%=link_to "Push Another Password", root_path%></p>
+<%=link_to "Ver a senha agora", @secret_url %> (irá queimar uma visualização) ou <%=link_to "Inserir outra senha", root_path%></p>
